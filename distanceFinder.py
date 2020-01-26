@@ -38,6 +38,8 @@ for i in range(len(states)):
             c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
             d = R * c
             
-            distanceForCurrentState = {states[j][0]: d}
+            if i != j:
+                distanceForCurrentState = {states[j][0]: d}
+                distances[states[i][0]].update(distanceForCurrentState)
 
-            distances[states[i][0]].update(distanceForCurrentState)
+print(distances)
