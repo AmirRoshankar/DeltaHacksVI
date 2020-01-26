@@ -3,32 +3,38 @@ import re
 
 # for the dict key, if key not in the dict, try flipping the order of the states
 
+# 1. open and read state coordinates
 statesFile = open("states.text", "r")
 statesCoords = statesFile.readlines()
 states = []
 
+# 2. split each line into substrings of 
 for row in statesCoords:
     row.strip("\n")
     states.append(row.split("\t"))
 
-for i in range(len(statesCoords)):
-    for j in range(2):
+# 3. convert coordinates into floats for distance calculation below in step 5
+for i in range(len(states)):
+    for j in range(1,3):
         states[i][j] = float(states[i][j])
 
-distances = {{}}
+# 4. initialize first dimension of distances (first state's distance dictionary)
+for i in range(len(states)):
+    distances = {{}}
 
-for statePair in states:
+for i in range(len(states)):
+    for j in range(len(states)):
+        for k in range(3):
+            R = 6371000
+            phi1 = math.radians(states[i][1])
+            phi2 = math.radians(states[j][1])
+            phiDelta = math.radians(states[j][1] - states[i][1])
+            lambdaDelta = math.radians(states[j][2] - states[i][2])
 
-    lat1, lon1, lat2, lon2 = float(lat1), float(lon1), float(lat2), float(lon2)
+            a = math.sin(phiDelta/2) * math.sin(phiDelta/2) + math.cos(phi1) * math.cos(phi2) * math.sin(lambdaDelta/2) * math.sin(lambdaDelta/2)
+            c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
+            d = R * c
+            
+            distanceForCurrentState = {states[j][0]:d}
 
-    R = 6371000
-    phi1 = math.radians(lat1)
-    phi2 = math.radians(lat2)
-    phiDelta = math.radians(lat2 - lat1)
-    lambdaDelta = math.radians(lon2 - lon1)
-
-    a = math.sin(phiDelta/2) * math.sin(phiDelta/2) + math.cos(phi1) * math.cos(phi2) * math.sin(lambdaDelta/2) * math.sin(lambdaDelta/2)
-    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
-    d = R * c
-
-    print(d)
+            distances[states[i][0]].update(distanceForCurrentState)
