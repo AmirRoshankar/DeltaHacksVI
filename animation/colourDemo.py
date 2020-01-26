@@ -13,7 +13,7 @@ fig = px.choropleth(locations=["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "
                            1,2,2,1,2,1,3,5,1,6,10],
                 scope="usa")
 
-fig.update_layout( title_text='2001 US Hepatitis<br>(Hover for breakdown of score)')
+fig.update_layout( title_text='1960s US Viral Hepatitis Spread<br>(Hover for breakdown of score)')
 
 
 fig.show()
