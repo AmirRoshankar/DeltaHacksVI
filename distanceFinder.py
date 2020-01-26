@@ -1,7 +1,5 @@
 import math
 
-# for the dict key, if key not in the dict, try flipping the order of the states
-
 def getDistances():
     # 1. open and read state coordinates
     statesFile = open("states.text", "r")
