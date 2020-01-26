@@ -43,4 +43,4 @@ for i in range(len(states)):
 
             distances[states[i][0]].update(distanceForCurrentState)
 
-print(distances)
+print(distances["AZ"]["FL"])
