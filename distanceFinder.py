@@ -8,20 +8,24 @@ statesFile = open("states.text", "r")
 statesCoords = statesFile.readlines()
 states = []
 
-# 2. split each line into substrings of 
+# 2. split each line into substrings of state abbreviation, latitude, longitude
 for row in statesCoords:
     row.strip("\n")
     states.append(row.split("\t"))
 
-# 3. convert coordinates into floats for distance calculation below in step 5
+# 3. convert coordinates into floats for distance calculation below in step 6
 for i in range(len(states)):
     for j in range(1,3):
         states[i][j] = float(states[i][j])
 
-# 4. initialize first dimension of distances (first state's distance dictionary)
-for i in range(len(states)):
-    distances = {{}}
+# 4. initialize distances nested dictionary with first state nested as a dictionary
+distances = {states[0][0]: {}}
 
+# 5. initialize first dimension of distances (first states' distance dictionary)
+for i in range(len(states)):
+    distances[states[i][0]] = {}
+
+# 6. calculate distances and update secondary dictionaries
 for i in range(len(states)):
     for j in range(len(states)):
         for k in range(3):
@@ -35,6 +39,8 @@ for i in range(len(states)):
             c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
             d = R * c
             
-            distanceForCurrentState = {states[j][0]:d}
+            distanceForCurrentState = {states[j][0]: d}
 
             distances[states[i][0]].update(distanceForCurrentState)
+
+print(distances)
