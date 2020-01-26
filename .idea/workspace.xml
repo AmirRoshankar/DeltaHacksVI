@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="599d619c-71e6-408b-83d3-5f1e985a2f44" name="Default Changelist" comment="" />
+    <list default="true" id="599d619c-71e6-408b-83d3-5f1e985a2f44" name="Default Changelist" comment="colourDemo for loop">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animation/colourDemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/animation/colourDemo.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,12 +77,20 @@
       <option name="project" value="LOCAL" />
       <updated>1580045269151</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="colourDemo for loop">
+      <created>1580051727419</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580051727419</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="colourDemo but it might not work" />
-    <option name="LAST_COMMIT_MESSAGE" value="colourDemo but it might not work" />
+    <MESSAGE value="colourDemo for loop" />
+    <option name="LAST_COMMIT_MESSAGE" value="colourDemo for loop" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="0" key="#Inspections" timestamp="1580042511118">
@@ -90,10 +101,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="64" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1580045198994" />
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1580045268505">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1580051732334">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580045268505" />
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1580051732334" />
     <state x="147" y="71" key="DiffContextDialog" timestamp="1580045104153">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -110,10 +121,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="164" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1580042773581" />
-    <state x="416" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1580045032110">
+    <state x="416" y="200" key="com.intellij.ide.util.TipDialog" timestamp="1580051921324">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="416" y="200" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580045032110" />
+    <state x="416" y="200" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580051921324" />
     <state x="549" y="314" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580043828817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
