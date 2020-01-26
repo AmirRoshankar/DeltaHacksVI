@@ -1,5 +1,4 @@
 import math
-import re
 
 # for the dict key, if key not in the dict, try flipping the order of the states
 
@@ -42,5 +41,3 @@ for i in range(len(states)):
             distanceForCurrentState = {states[j][0]: d}
 
             distances[states[i][0]].update(distanceForCurrentState)
-
-print(distances["AZ"]["FL"])
