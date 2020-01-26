@@ -20,6 +20,7 @@ testset = torch.utils.data.DataLoader(test, batch_size=10, shuffle=True)
 import torch.nn as nn
 import torch.nn.functional as F
 
+# CLIMATE: temperature, precipitation, wind speed, uv radiation, humidity, air quality
 # population 1, population density 10, temperature 10, average income (cumulative with deciles) 10, age cumulative by deciles 10,
 # rainfall 10, humidity level 1, wind speed/h 1, GDP
 inSize = 58
